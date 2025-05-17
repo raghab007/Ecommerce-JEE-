@@ -1,17 +1,21 @@
 package controller.servlets;
 
-import java.io.IOException;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
+
+
+
+import java.io.File;
+import java.io.IOException;
 
 import Model.Product;
 import controller.databases.DatabaseController;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
 import utils.StringUtils;
 
 
@@ -39,6 +43,8 @@ public class AddProductServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		int productId=     Integer.parseInt(request.getParameter("productId"));
+		System.out.println("product id");
+		System.out.println(productId);
 		String productName =  request.getParameter("productName");
 		String description = request.getParameter("productDescription");
 		int price = Integer.parseInt(request.getParameter("productPrice"));
@@ -50,12 +56,30 @@ public class AddProductServlet extends HttpServlet {
 		
 		Product product = new Product(productId, productName, description, price, categoryId, quantity,part);
 		String savePath = StringUtils.IMAGE_DIR_SAVE_PATH;
+		
+		// Handle image file directory and saving
+	    System.out.println("Save path: " + savePath);
+	    
+	    // Create directory if it doesn't exist (double-check before writing)
+	    File saveDir = new File(savePath);
+	    if (!saveDir.exists()) {
+	        boolean created = saveDir.mkdirs();
+	        System.out.println("Creating directory result: " + created);
+	        
+	        // If directory creation failed, check the parent directory
+	        if (!created) {
+	            System.out.println("Parent directory exists: " + saveDir.getParentFile().exists());
+	            System.out.println("Parent directory path: " + saveDir.getParentFile().getAbsolutePath());
+	        }
+	    }
+	    
+		System.out.println(savePath);
 	    String fileName = product.getImageUrlFromPart();
+	    System.out.println("file name");
+	    System.out.println(fileName);
 	    if(!fileName.isEmpty() && fileName != null)
     		part.write(savePath + fileName);
 
-		
-		
 		
 	int res = db.addProduct(product);
 	if (res==1) {

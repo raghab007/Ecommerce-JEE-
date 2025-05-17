@@ -1,9 +1,10 @@
 package utils;
 import java.io.File;
+import java.nio.file.Paths;
 public class StringUtils {
 	// Start: DB Connection
 	public static final String DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
-	public static final String LOCALHOST_URL = "jdbc:mysql://localhost:3308/SmartHomeCare";
+	public static final String LOCALHOST_URL = "jdbc:mysql://localhost:3306/SmartTech";
 	public static final String LOCALHOST_USERNAME = "root";
 	public static final String LOCALHOST_PASSWORD = "";
 	// End: DB Connection
@@ -57,9 +58,17 @@ public class StringUtils {
 	//public static final String IMAGE_DIR_USER = "Users/neerazanpokhrel/Desktop/Week3Tutorial/src/main/webapp/resources/images/user/";
 	//public static final String IMAGE_DIR_SAVE_PATH =  File.separator + IMAGE_DIR_USER;
 	
-	public static final String IMAGE_DIR_PRODUCT = "/Users/neerazanpokhrel/Desktop/Smart Home Care/src/main/webapp/resources/images/products/";
-	public static final String IMAGE_DIR_SAVE_PATH =  File.separator + IMAGE_DIR_PRODUCT;
-	public static final String IMAGE_DIR_USER = "/Users/neerazanpokhrel/Desktop/Smart Home Care/src/main/webapp/resources/images/users/";
+	public static final String IMAGE_DIR_PRODUCT = "/Users/raghabpokhrel/Desktop/Advanced_Java/Ecommerce-JEE-/src/main/webapp/resources/images/products/";
+
+	public static final String IMAGE_DIR_SAVE_PATH = IMAGE_DIR_PRODUCT; // Use the same path directly
+//	public static final String IMAGE_DIR_SAVE_PATH = Paths.get(
+//		    System.getProperty("user.home"),
+//		    "Desktop", "Advanced_Java", "Ecommerce-JEE-", "src", "main", "webapp", "resources", "images", "products"
+//		).toAbsolutePath().toString();
+	
+//	public static final String IMAGE_DIR_SAVE_PATH = 	"/Users/raghabpokhrel/Desktop/Advanced_Java/Ecommerce-JEE-/src/main/webapp/resources/images/products/";
+
+	public static final String IMAGE_DIR_USER = "/Users/raghabpokhrel/Desktop/Advanced_Java/Ecommerce-JEE-"+ "/src/main/webapp/resources/images/users/";
 	public static final String IMAGE_DIR_SAVE_PATH_USER =  File.separator + IMAGE_DIR_USER;
 	
 	// Other Messages

@@ -3,8 +3,7 @@ package Model;
 import java.io.File;
 import java.io.Serializable;
 
-import javax.servlet.http.Part;
-
+import jakarta.servlet.http.Part;
 import utils.StringUtils;
 
 public class Product implements Serializable {
@@ -105,9 +104,10 @@ private	String description;
 	private String getImageUrl(Part part) {
 		String savePath = StringUtils.IMAGE_DIR_SAVE_PATH;
 		File fileSaveDir = new File(savePath);
+		System.out.println("Saving to: " + savePath); // Debug line
 		String imageUrlFromPart = null;
 		if (!fileSaveDir.exists()) {
-			fileSaveDir.mkdirs();
+		    System.out.println("Creating directory: " + fileSaveDir.mkdirs());
 		}
 		String contentDisp = part.getHeader("content-disposition");
 		String[] items = contentDisp.split(";");
@@ -121,6 +121,8 @@ private	String description;
 		}
 		return imageUrlFromPart;
 	}
+	
+	
 	
 	
 	

@@ -9,9 +9,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mysql.cj.protocol.Resultset;
-import com.mysql.cj.x.protobuf.MysqlxPrepare.Prepare;
-import com.mysql.cj.xdevapi.Result;
 
 import Model.CartModel;
 import Model.ModifyUserModel;
@@ -34,8 +31,7 @@ public class DatabaseController {
 		return connection;	
 		
 	}
-	
-	
+
 	
 	
 	public int addUser(User user) throws ClassNotFoundException, SQLException {

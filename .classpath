@@ -6,24 +6,49 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.5 (8)">
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/Users/raghabpokhrel/Downloads/jakarta.servlet-api-5.0.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/raghabpokhrel/Downloads/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/raghabpokhrel/Downloads/jakarta.servlet.jsp.jstl-2.0.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v10.1">
 		<attributes>
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/Users/neerazanpokhrel/Desktop/mysql-connector-j-8.3.0/mysql-connector-j-8.3.0.jar">
+	<classpathentry kind="lib" path="/Users/raghabpokhrel/Downloads/jstl-1.2.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/neerazanpokhrel/Downloads/taglibs1.2.5_a22df91a-17a3-4eca-8794-08dc51faa89a_93445_/taglibs-standard-impl-1.2.5.jar">
+	<classpathentry kind="lib" path="/Users/raghabpokhrel/Desktop/Jar files/jakarta.activation-2.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/neerazanpokhrel/Downloads/taglibs1.2.5_a22df91a-17a3-4eca-8794-08dc51faa89a_93445_/taglibs-standard-spec-1.2.5.jar">
+	<classpathentry kind="lib" path="/Users/raghabpokhrel/Desktop/Jar files/jakarta.servlet.jsp.jstl-api-2.0.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/raghabpokhrel/Desktop/Jar files/jakarta.servlet.jsp.jstl-api-3.0.0-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/raghabpokhrel/Desktop/Jar files/jakarta.xml.bind-api-3.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

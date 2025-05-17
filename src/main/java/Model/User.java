@@ -4,8 +4,7 @@ import java.io.File;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import javax.servlet.http.Part;
-
+import jakarta.servlet.http.Part;
 import utils.StringUtils;
 
 public class User implements Serializable {

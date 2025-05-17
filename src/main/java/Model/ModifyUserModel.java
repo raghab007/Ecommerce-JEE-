@@ -4,8 +4,7 @@ import java.io.File;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import javax.servlet.http.Part;
-
+import jakarta.servlet.http.Part;
 import utils.StringUtils;
 
 public class ModifyUserModel implements Serializable {
@@ -87,7 +86,7 @@ public class ModifyUserModel implements Serializable {
 		this.gender = gender;
 	}
 	
-	private String getImageUrl(Part part) {
+	private String getImageUrl(jakarta.servlet.http.Part part) {
 		String savePath = StringUtils.IMAGE_DIR_SAVE_PATH_USER;
 		File fileSaveDir = new File(savePath);
 		String imageUrlFromPart = null;
